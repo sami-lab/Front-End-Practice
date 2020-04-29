@@ -49,10 +49,12 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar  navbar-expand-lg  fixed-top  py-1" style="background-color:#F7F8FA;  z-index: 50;">
+        <nav class="navbar  navbar-expand-lg  py-1 "  style="background-color:#F7F8FA;   z-index: 50;">
             <div class="container">
-                <a href="#" class="navbar-brand text-uppercase font-weight-bold"><img class="w-50 h-25" src="https://www.saylaniwelfare.com/public_html/images/saylani/Saylani-logo.png" alt=""></a>
-                <button type="button" data-toggle="collapse" data-target="#nav1" aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                <div style="display: flex;">
+                   <a href="#" class="navbar-brand text-uppercase font-weight-bold"><img class="w-50  h-auto" src="https://www.saylaniwelfare.com/public_html/images/saylani/Saylani-logo.png" alt=""></a>
+                   <button type="button" data-toggle="collapse" data-target="#nav1" aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                </div>
                 <div class="collapse navbar-collapse" id="nav1">
                     <ul class="navbar-nav" style="z-index: 2;">
                         <li class="nav-item active">
@@ -557,6 +559,17 @@
 </body>
 
      <script type="text/javascript">
+
+	$(document).on("scroll", function(){
+		if
+      ($(document).scrollTop() > 86){
+		  $(".navbar").addClass("fixed-top");
+		}
+		else
+		{
+			$(".navbar").removeClass("fixed-top");
+		}
+	});
         let num= 0;
         $(window).scroll(function(){
             if($(this).scrollTop() > 1000)
